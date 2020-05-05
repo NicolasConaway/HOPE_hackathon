@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Nav Bar and Logo -->
+    <header>
+        <div class="logo--wrapper">
+            <img src="../Images/HackathonLogo.jpg" alt="logo" class="logo">
+        </div>
+
+        <nav class="navbar">
+            <div class="hamburger--container">
+                <div class="hamburger--line line--1"></div>
+                <div class="hamburger--line line--2"></div>
+                <div class="hamburger--line line--3"></div>
+            </div>
+
+            <ul class="ul--navlinks">
+                <li><a href="#">Medical Records</a></li>
+                <li><a href="#">Doctors Info</a></li>
+                <li><a href="#">Schedule Appointments</a></li>
+                <li><a href="#">Emergency</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Button to start recording your voice -->
+    <div class="img_wrapper">
+        <img class="microphone" src="../Images/microphone.png" alt="Microphone Icon">
+    </div>
+
+    <!-- Box where the chat log will take place -->
+    <div class="chat_wrapper">
+        <div class="chat_messages"></div>
+    </div>
+
+    <script>
+        /*Nav Bar animation*/
+        const hamburgerIcon = document.querySelector(".hamburger--container")
+        const navBar = document.querySelector(".navbar")
+
+      hamburgerIcon.addEventListener('click', () => {
+      navBar.classList.toggle("change")
+})
+        /*Microphone listening toggle*/
+        const wrapper = document.querySelector('.img_wrapper')
+        const listeningIn = document.querySelector('.microphone');
+         
+        listeningIn.addEventListener('click', () => {
+            listeningIn.classList.toggle("listening")
+        })
+    </script>
+</body>
+</html>
