@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
@@ -31,12 +32,16 @@
     
     <!-- Button to start recording your voice -->
     <div class="img_wrapper">
-        <img class="microphone" src="../Images/microphone.png" alt="Microphone Icon">
+        <img class="microphone" id="mic-start" src="../Images/microphone.png" alt="Microphone Icon">
+        <img class="microphone not-listening" id="mic-stop" src="../Images/mute_mic.png" alt="Mute Mic Icon">
     </div>
 
     <!-- Box where the chat log will take place -->
     <div class="chat_wrapper">
         <div class="chat_messages"></div>
+        <div id="msg" class="msg">
+            <!-- <span class="box"></span> -->
+        </div>
     </div>
 
     <script>
@@ -49,11 +54,19 @@
 })
         /*Microphone listening toggle*/
         const wrapper = document.querySelector('.img_wrapper')
-        const listeningIn = document.querySelector('.microphone');
+        const listeningIn = document.querySelector('#mic-start');
+        const stoplisteningIn = document.querySelector('#mic-stop');
          
         listeningIn.addEventListener('click', () => {
-            listeningIn.classList.toggle("listening")
+            listeningIn.classList.add("listening")
+            stoplisteningIn.classList.remove("not-listening")
+        })
+
+        stoplisteningIn.addEventListener('click', () => {
+            stoplisteningIn.classList.add("not-listening")
+            listeningIn.classList.remove("listening")
         })
     </script>
+    <script src="../JavaScript/speech.js"></script>
 </body>
 </html>
