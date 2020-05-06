@@ -1,16 +1,37 @@
 body {
     margin: 0;
     height: 100%;
-    width: 100%
+    width: 100%;
+    background-image: linear-gradient(to right bottom, #FFFFFF, #F1F3FB, #DEE9F7, #C6E0F0, #ADD8E6);
 }
+
 /* **********
 Nav Bar and Logo styling
 ********** */
 header{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 100px auto auto ;
 }
-
+.logo {
+    height: 100px;
+    width: 100px ;
+    margin-top: 0;
+}
+.logo--wrapper{
+    width: 100px ;
+    height: 100px ;
+}
+.logo-name{
+    font-family: 'Russo One' ;
+    margin : 0 ;
+    font-weight: bold;
+    font-style: italic;
+    padding-top: 10px ;
+    padding-left: 40px;
+    font-size: 22px ;
+    letter-spacing: 2px;
+    color: #696969 ;
+}
 .navbar{
     display: flex;
     flex-direction: column;
@@ -27,38 +48,25 @@ header{
     transition: right .5s cubic-bezier(1,0,0,1);
     border-radius: 0;
 }
-
 .change{
     width: 100vw;
     border-radius: 0;
     opacity: 90%;
-    right: 0 ; 
+    right: 0 ;
 }
-
 .change .line--1{
     transform: rotateZ(-405deg) translate(-11px, 9px);
 }
-
 .change .line--2{
     opacity: 0;
 }
-
 .change .line--3{
     transform: rotateZ(405deg) translate(-10px, -8px);
 }
-
 .change .hamburger--container{
     background-color: transparent;
     transition: ease-in-out .5s;
 }
-
-.logo{
-    height: 100px;
-    width: 100px ; 
-    margin-left: 30px;
-}
-
-
 .hamburger--container{
     position: fixed;
     background-color: white;
@@ -73,31 +81,26 @@ header{
     align-items: center;
     justify-content: space-around;
 }
-
 .hamburger--line{
     background-color:#000080;
     width:100%;
     height: 5px;
 }
-
 .ul--navlinks li{
     margin:50px;
     text-align: center;
-    list-style: none ; 
+    list-style: none ;
 }
-
 .ul--navlinks li a{
     color: white   ;
     font-size: 1.2rem;
     text-decoration: none;
     text-transform: uppercase;
 }
-
 .ul--navlinks li a:hover{
-    box-shadow: 1px 1px 20px #ffffff;
-    border-radius : 20px ; 
-    animation: 100ms ease-in-out infinite ; 
-    
+    box-shadow: 1px 1px 20px #FFFFFF;
+    border-radius : 20px ;
+    animation: 100ms ease-in-out infinite ;
 }
 
 /* **********
@@ -111,7 +114,7 @@ Styling of the microphone button
     margin-top: 35%
 }
 .microphone {
-    width: 25%;
+    width: 20%;
     margin: 0 2%;
     border: .5vh solid black;;
     border-radius: 50%;
@@ -138,9 +141,9 @@ Styling of the microphone button
     height: 100%;
 }
 .chat_messages{
-    border: .25vh solid black;
-    border-radius: 5%;
-    background-color: rgba(64, 76, 185, 0.2);
+    border: .25vh solid #708090;
+    border-radius: 5% 5% 0 0;
+    box-shadow: 5px 10px 18px #888888;
     width: 80%;
     height: 42vh;
 }
@@ -153,10 +156,11 @@ Styling of the microphone button
     text-align: center;
 }
 .box{
-    border: .25vh solid black;
+    border: .25vh solid #708090;
+    box-shadow: 5px 10px 18px #888888;
     display: inline-block;
     font-size: 1.25rem;
     margin: 0 ;
     padding: 10px;
-    border-radius: 10%;
+    border-radius: 0 0 10% 10%;
 }
