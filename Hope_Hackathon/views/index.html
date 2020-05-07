@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
-    <title>Document</title>
+
 </head>
 <body>
     <!-- Nav Bar and Logo -->
     <header>
         <div class="logo--wrapper">
-            <img src="../Images/HackathonLogo.jpg" alt="logo" class="logo">
+            <img src="../static/HackathonLogo.jpg" alt="logo" class="logo">
         </div>
 
         <div class = "logo-name">
@@ -37,8 +37,8 @@
     
     <!-- Button to start recording your voice -->
     <div class="img_wrapper">
-        <img class="microphone" id="mic-start" src="../Images/microphone.png" alt="Microphone Icon">
-        <img class="microphone not-listening" id="mic-stop" src="../Images/mute_mic.png" alt="Mute Mic Icon">
+        <img class="microphone" id="mic-start" src="../static/microphone.png" alt="Microphone Icon">
+        <img class="microphone not-listening" id="mic-stop" src="../static/mute_mic.png" alt="Mute Mic Icon">
     </div>
 
     <!-- Box where the chat log will take place -->
@@ -72,6 +72,7 @@
             listeningIn.classList.remove("listening")
         })
     </script>
-    <script src="../JavaScript/speech.js"></script>
+    <script src="../static/speech.js"></script>
+    
 </body>
 </html>

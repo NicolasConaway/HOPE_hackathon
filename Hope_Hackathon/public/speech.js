@@ -1,3 +1,6 @@
+
+
+
 const msgEl = document.getElementById('msg');
 const start = document.getElementById('mic-start');
 const stop = document.getElementById('mic-stop')
@@ -34,3 +37,10 @@ function writeMessage(msg) {
     msgEl.innerHTML = `
         <span class="box"> ${msg} </span>`;
 }
+
+function synthVoice(text) {
+    const synth = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance();
+    utterance.text = text;
+    synth.speak(utterance);
+  }
