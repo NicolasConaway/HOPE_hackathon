@@ -5,7 +5,7 @@ const server = express();
 server.use('/static', express.static('public'))
 
 server.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/index.html'));
+    res.sendFile(path.join(__dirname, '/html/index.html'));
 });
 
 
